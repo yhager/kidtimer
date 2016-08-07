@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# This script makes kidtimer update account status when the machine is woken up.
+# For a laptop, these are the closest parallels to turning on a desktop.
+
+case $1 in
+    resume|thaw)
+        /usr/local/bin/kidtimer hourly
+        ;;
+esac
