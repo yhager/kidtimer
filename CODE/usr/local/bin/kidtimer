@@ -233,9 +233,9 @@ if [ -s $configdir/kid.list ]; then
                         [ "$WEEKEND" == "no" ] && R=`/bin/grep ^$HOUR $basedir/schedule/$I | /usr/bin/awk '{ print $2 }'`
                         [ "$WEEKEND" == "yes" ] && R=`/bin/grep ^$HOUR $basedir/schedule/$I | /usr/bin/awk '{ print $3 }'`
                         if [ "$R" == "y" ]; then
-                                /usr/bin/passwd $I -u
+                                /usr/bin/passwd $I -u -q
                         else
-                                /usr/bin/passwd $I -l
+                                /usr/bin/passwd $I -l -q
 
 # should gnome-screensaver-command -l
 
